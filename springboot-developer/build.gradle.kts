@@ -15,6 +15,11 @@ repositories {
 dependencies { // 의존성 입력
     implementation("org.springframework.boot:spring-boot-starter-web") // 웹관련 기능
     testImplementation("org.springframework.boot:spring-boot-starter-test") // 테스트 기능
+    // 스프링 데이터 JPA
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    runtimeOnly("com.h2database:h2") // 인메모리 데이터베이스
+    compileOnly("org.projectlombok:lombok") // 롬복
+    annotationProcessor("org.projectlombok:lombok")
 }
 
 tasks.test {
